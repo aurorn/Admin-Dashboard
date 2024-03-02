@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.maingrid {
+    display: grid; 
+    grid-template-columns: 1fr 2.1fr 1fr; 
+    grid-template-rows: 0.7fr 1.3fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "sidebar topbar topbar"
+        "sidebar mainbar mainbar"
+        "sidebar mainbar mainbar"; 
+}
+
+.sidebar{
+    background-color: rgb(6, 192, 192);
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topbar {
+    background-color: rgb(245, 245, 245);
+    grid-area: topbar; 
+}
+
+.mainbar {
+    grid-area: mainbar;
+    
+
+}
+.secondgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) ;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
