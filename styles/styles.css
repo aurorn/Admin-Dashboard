@@ -1,7 +1,17 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
 
 .maingrid {
     display: grid; 
@@ -15,11 +25,13 @@
 }
 
 .sidebar{
-    background-color: rgb(6, 192, 192);
+    background-color: #1992d4;
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 5%;
+    
+    
 }
 
 .topbar {
@@ -29,17 +41,65 @@
 
 .mainbar {
     grid-area: mainbar;
-    
+    background-color: rgb(230, 227, 227);
 
 }
 .secondgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;  
 }
 
+.cards1 {
+    background-color: rgb(245, 245, 245);
+    grid-area: 1 / 1 / 4 / 3;
+}
+
+
+.cards2 {
+    background-color: rgb(245, 245, 245);
+    grid-area: 1 / 3 / 4 / 4;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
+}
+
+li {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: whitesmoke;
+    font-size: 100%;
+}
+
+.li-icon {
+    width: auto;
+    height: 1.5em;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    
+}
+
+h3 {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 3%;
 }
