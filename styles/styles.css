@@ -11,19 +11,21 @@ html {
 
 .maingrid {
     display: grid; 
+    min-height: 100vh;
     
 }
 
 /* Sidebar Styling */
 .sidebar{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-rows: 1fr 5fr 5fr;
     padding: 0px 40px 0px 20px;
     gap: 10px;
     background-color: #1992D4;
     box-shadow: 3px 0px 10px rgba(128, 128, 128, 0.521);
     z-index: 1;
-    position: fixed;
+    position:absolute
     
 }
 
@@ -64,7 +66,7 @@ ul {
     padding: 0;
 }
 
- li {
+li {
     display: flex;
     align-items: center;
     gap: 10%;
@@ -73,7 +75,7 @@ ul {
     font-size: 1.1em;
     font-weight: 400;
     width: 100%;
-    overflow: hidden;
+    
 
 }
 
@@ -169,6 +171,7 @@ li:not(:last-child) {
     display: flex;
     gap: 30px;
 }
+
 .profile-buttons {
     background-color: #1992D4;
     padding: 10px 25px;
@@ -194,6 +197,88 @@ li:not(:last-child) {
 
 /* Topbar Styling */
 
+#main-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: #E2E8F0;
+    z-index: 0;
+}
+#project-grid {
+    display: grid;
+    grid:repeat(3,1fr) / repeat(3,1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+.project-card {
+    background-color: rgb(245, 245, 245);
+    padding: 30px;
+    min-width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px grey, inset 8px 0px #F0B429;
+    outline: none;
+}
+
+.mainbarheading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project-header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.project-atb {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.project-atb img {
+    height: 25px;
+    width: auto;
+}   
+
+.app-para {
+    font-size: 0.9rem;
+    
+}
+
+/* Side Cards */
+
+#announcements, #trending {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0px  0px 20px 30px;
+    min-width: 300px;
+}
+.announcements-div { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 5px;
+}
+.other-projects {
+    color: black;
+    font-weight: 600;
+}
+.other-project-para {
+    font-size: 0.8rem;
+    margin-top: 8px;
+    font-weight: 300;
+}
+
 .mainbar {
     display: flex;
     flex-direction: row;
@@ -201,21 +286,4 @@ li:not(:last-child) {
     background-color: whitesmoke;
     z-index: 0;
 
-}
-
-.cards1 {
-    background-color: rgb(121, 101, 101);
-    
-}
-
-.cards2 {
-    background-color: rgb(134, 24, 24);
-   
-    
-}
-
-#card {
-    padding: 10px;
-    gap: 20px;
-    border-color: 1px solid black;
 }
